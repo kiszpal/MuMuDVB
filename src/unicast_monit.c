@@ -547,7 +547,7 @@ unicast_send_prometheus (int number_of_channels, mumudvb_channel_t *channels, in
 
     // Channels list
     unicast_reply_write(reply, "# TYPE number_of_clients gauge\n");
-    for (curr_channel = 0; curr_channel < number_of_channels; curr_channel++)
+    for (int curr_channel = 0; curr_channel < number_of_channels; curr_channel++)
     {
         //We give only channels which are ready
         if(channels[curr_channel].channel_ready<READY)
